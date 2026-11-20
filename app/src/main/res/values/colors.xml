@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_primary">#1565C0</color>
+    <color name="brand_primary_dark">#0D47A1</color>
+    <color name="brand_accent">#F57C00</color>
+    <color name="surface_bg">#F5F7FA</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="card_stroke">#DCE3EC</color>
+    <color name="text_primary">#1A2332</color>
+    <color name="text_secondary">#5A687A</color>
+
+    <color name="overlay_bg">#EE141B24</color>
+    <color name="overlay_border">#334155</color>
+    <color name="badge_idle">#475569</color>
+    <color name="badge_learning">#7C3AED</color>
+    <color name="badge_jumping">#0284C7</color>
+    <color name="badge_running">#16A34A</color>
+    <color name="badge_paused">#D97706</color>
+    <color name="badge_manual_pay">#0D9488</color>
+    <color name="badge_alarm">#DC2626</color>
+    <color name="badge_error">#B91C1C</color>
+
+    <color name="danger_red">#DC2626</color>
+    <color name="warning_amber">#D97706</color>
+    <color name="success_green">#15803D</color>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SudhaAutoBot</string>
+    <string name="accessibility_service_label">SudhaAutoBot Order Automation</string>
+    <string name="accessibility_service_description">Deterministic state-aware Accessibility Service for automating daily milk orders in Sudha Daily Orders (in.vasista.suprabhat).</string>
+    <string name="diagnostic_log_title">Diagnostic Event Log</string>
+</resources>

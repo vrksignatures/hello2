@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer ID (exact, e.g. SMR2246)"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/etDialogCustomerId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="SMR2246"
+        android:inputType="textCapCharacters|textNoSuggestions" />
+
+    <RadioGroup
+        android:id="@+id/rgRuleType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbExactPack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Exact Pack" />
+
+        <RadioButton
+            android:id="@+id/rbVolumeDelta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Volume Delta (ml)" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvDialogTargetLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Milk SKU / Family"
+        android:textSize="12sp" />
+
+    <Spinner
+        android:id="@+id/spSkuOrFamily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvDialogValueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Exact MQty (packs) or Delta (+/- ml, e.g. 1000 or -500)"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/etDialogValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="e.g. 6 or 1000 or -500"
+        android:inputType="numberSigned" />
+</LinearLayout>
