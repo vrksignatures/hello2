@@ -19,7 +19,21 @@ jobs:
           gradle-version: 8.7
       - name: Run Tests & Build Debug APK
         run: |
-          if [ -f "SudhaAutoBot/settings.gradle.kts" ]; then cd SudhaAutoBot; fi
+          if [ -z "$(find . -name 'settings.gradle.kts' -print -quit)" ]; then
+            ZIP_FILE=$(find . -maxdepth 2 -name '*.zip' -print -quit)
+            if [ -n "$ZIP_FILE" ]; then
+              unzip -o "$ZIP_FILE"
+            fi
+          fi
+          SETTINGS_FILE=$(find . -name 'settings.gradle.kts' -print -quit)
+          if [ -z "$SETTINGS_FILE" ]; then
+            echo "ERROR: Repo mein settings.gradle.kts ya ZIP file nahi mili. Current files:"
+            ls -la
+            exit 1
+          fi
+          PROJECT_DIR=$(dirname "$SETTINGS_FILE")
+          echo "Building Gradle project in: $PROJECT_DIR"
+          cd "$PROJECT_DIR"
           gradle testDebugUnitTest assembleDebug --stacktrace
       - name: Upload SudhaAutoBot Debug APK
         uses: actions/upload-artifact@v4
