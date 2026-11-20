@@ -11,13 +11,23 @@ android {
         applicationId = "com.vrksignatures.sudhabot"
         minSdk = 26
         targetSdk = 34
-        versionCode = 20
-        versionName = "2.0.0-rebuild"
+        versionCode = 21
+        versionName = "2.0.1-rebuild"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        getByName("debug") {
+            enableV1Signing = true
+            enableV2Signing = true
+        }
+    }
+
     buildTypes {
+        debug {
+            signingConfig = signingConfigs.getByName("debug")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
